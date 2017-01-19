@@ -2,10 +2,13 @@
 var debug = require('debug')('changelog:printSection');
 var format = require('util').format;
 
-function printCommit(commit, printCommitLinks) {
+function printCommit(commit, printCommitLinks, printBody) {
   var prefix = '';
   var result = '';
-
+  console.log('-^-^--');
+  console.log(commit);
+  console.log(printCommitLinks);
+  console.log('-^--^-');
   if (printCommitLinks) {
     result += format('%s\n  (%s', commit.subject, this.linkToCommit(commit.hash));
 
@@ -17,6 +20,11 @@ function printCommit(commit, printCommitLinks) {
     result += format('%s\n', commit.subject);
   }
 
+  if (printBody) {
+    result += format('%s\n', commit.body);
+  }
+
+  console.log('\x1b[35m%s\x1b[0m', result);
   return result;
 }
 

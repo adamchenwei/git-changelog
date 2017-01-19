@@ -23,6 +23,9 @@ function parseRawCommit(raw) {
 
   lines.forEach(parseLine.bind(null, msg));
 
+  console.log('$$$$$$$$ PRIOR PARSING BEG');
+  console.log(lines);
+  console.log('$$$$$$$$ PRIOR PARSING END');
   msg.hash = lines.shift();
   msg.subject = lines.shift();
 
@@ -31,7 +34,14 @@ function parseRawCommit(raw) {
     msg.breaking = match[1];
   }
 
+  console.log('--------- PRIOR BODY PARSING BEG');
+  console.log(lines);
+  console.log('--------- PRIOR BODY PARSING END');
+
   msg.body = lines.join('\n');
+  console.log('$$$$$$$$ AFTER PARSING BEG');
+  console.log(lines);
+  console.log('$$$$$$$$ AFTER PARSING END');
   match = msg.subject.match(/^(.*)\((.*)\)\:\s(.*)$/);
   //@TODO: match merges and pull request messages
   if (!match) {
