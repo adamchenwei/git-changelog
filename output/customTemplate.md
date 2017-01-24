@@ -33,6 +33,8 @@ _This changelog is generated with a custom template_
     - move q to dependancies since it is required to run (257119cf2bb6d8f341a5d65a2f47bcf803dff205)
   - **params**
     - Restores versionName in CLI (1d97f952bd5d37f67c1febdf161f4ce9b310eebf)
+  - **template**
+    - Fixes missing space in version_name output in template (f494f4a93a3c4a245f706cfb65f735a5ccccb2ce, Closes: [#72](https://github.com/rafinskipg/git-changelog/issues/72))
   - **travis**
     - Removed 0.12 nodejs version, addd 7.3.0 (1819083690e70e0af28d0c155b6fa67cbeb1dfb3)
 
