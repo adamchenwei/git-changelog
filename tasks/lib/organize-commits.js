@@ -8,7 +8,9 @@ function grepSection(sections, commit){
   //TODO: MONKEY METHOD, please use the regexp greps
 
   var keys = Object.keys(sections);
-
+  console.log('--*');
+  console.log(commit);
+  console.log('*--');
   for (var i = 0; i < keys.length; i++){
     if(commit.subject.indexOf(keys[i]) === 0){
       return sections[keys[i]];
@@ -67,6 +69,9 @@ function organizeCommits(commits, defaultSections) {
   };
 
   defaultSections.forEach(function(sectionInfo){
+    /*console.log('--*');
+    console.log(sectionInfo);
+    console.log('*--');*/
     var sectionType = sectionInfo.grep.replace('^', '');
     
     sections[sectionType] = {

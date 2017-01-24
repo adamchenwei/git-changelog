@@ -4,6 +4,11 @@ var debug = require('debug')('changelog:generate');
 
 function generateFromCommits(commits, sections) {
   this.message('parsed commits', commits.length);
+  console.log('--------------------beg commits');
+  commits.forEach(function(commit, index) {
+    console.log(commit);
+  });
+  console.log('--------------------end commits');
   this.log('debug', 'Parsed', commits.length, 'commits');
   this.log('info','Generating changelog to', this.options.file || 'stdout', '(', this.options.version_name, ')');
 
