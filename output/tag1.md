@@ -4,7 +4,7 @@
 
 _This changelog is from the previous tag_
 
-## squeezy potatoe v0.0.1 ( Fri Jan 06 2017 13:50:31 GMT+0100 (CET) )
+## squeezy potatoe v0.0.1 ( Wed Jan 18 2017 13:36:19 GMT+0100 (CET) )
 
 
 ## Bug Fixes
